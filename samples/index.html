@@ -1,0 +1,35 @@
+<div>
+  <input type="button" value="getNamesToIds" onclick="getNamesToIds()">
+</div>
+<div>
+  <input type="text" id="setNamedRangeFromSelection" placeholder="Set name.">
+  <input type="button" value="setNamedRangeFromSelection" onclick="setNamedRangeFromSelection()">
+</div>
+<div>
+  <input type="text" id="selectNamedRangeById" placeholder="Set id.">
+  <input type="button" value="selectNamedRangeById" onclick="selectNamedRangeById()">
+</div>
+<div>
+  <input type="text" id="checkNamedRangeOfCursorById" placeholder="Set id.">
+  <input type="button" value="checkNamedRangeOfCursorById" onclick="checkNamedRangeOfCursorById()">
+</div>
+<script>
+  function getNamesToIds() {
+    google.script.run.getNamesToIds();
+  }
+
+  function setNamedRangeFromSelection() {
+    const name = document.getElementById("setNamedRangeFromSelection").value;
+    google.script.run.setNamedRangeFromSelection(name);
+  }
+
+  function selectNamedRangeById() {
+    const id = document.getElementById("selectNamedRangeById").value;
+    google.script.run.selectNamedRangeById(id);
+  }
+
+  function checkNamedRangeOfCursorById() {
+    const id = document.getElementById("checkNamedRangeOfCursorById").value;
+    google.script.run.checkNamedRangeOfCursorById(id);
+  }
+</script>
